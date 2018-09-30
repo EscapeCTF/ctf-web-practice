@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Shower Presentation Engine</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
+	<style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+        }
+    </style>
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Курс Web-технологий в ИБ</h1>
+		<p>DEADBLACKCLOVER</p>
+	</header>
+
+	<section class="slide" id="cover">
+		<h2>Введение<br>в Web</h2>
+		<p>by <a href="https://deadblackclover.gitlab.io/">DEADBLACKCLOVER</a></p>
+		<p>Tg: @cloverfuckblack
+		<figure>
+			<img class="cover" src="pictures/cover.jpg">
+		</figure>
+		<style>
+			#cover {
+				background-color: black;
+			}
+
+			#cover h2 {
+				margin: -40px 0 0;
+				color: white;
+				text-align: left;
+				font-size: 70px;
+			}
+
+			#cover p {
+				margin: 10px 0 0;
+				text-align: left;
+				color: white;
+				font-style: italic;
+				font-size: 20px;
+			}
+
+			#cover p a {
+				color: white;
+			}
+
+			#cover img {
+
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Что такое Web?</h2>
+	</section>
+
+	<section class="slide">
+		<h2>Не много истории</h2>
+		<ol>
+			<li>1989 - Тим Бернерс Ли предложил идею обмена информацией посредством гипертекстовых страниц</li>
+			<li class="next">1993 - Публикация проектов в сети для общественного  пользования</li>
+			<li class="next">1994 - Переход Тима Бернерса Ли в MIT, создание World  Wide Web Consortium (W3C)</li>
+			<li class="next">1995 - HTML 2.0, RFC 1866, Internet Explorer и Netscape Navigator, JavaScript</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Web по технологиям использования</h2>
+		<ol>
+			<li>Web-сайты</li>
+			<li>Web-приложения</li>
+			<li>Мобильные приложения</li>
+			<li>Десктопные приложения</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Что представляет собой Web?</h2>
+	</section>
+
+	<section id="front" class="slide">
+		<figure>
+			<img class="cover next" src="pictures/f1.png">
+			<img class="cover next" src="pictures/f2.png">
+			<img class="cover next" src="pictures/f3.png">
+		</figure>
+		<style>
+			#front img {
+				width: 100%
+			}
+		</style>
+	</section>
+
+	<section class="slide">
+		<h2 class="shout shrink">Причем тут ИБ?</h2>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/durshlag.jpg">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/eye.gif">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2>Что мы видим снаружи</h2>
+		<ol>
+			<li>Основы работы с браузерами</li>
+			<li>Пока все DOM'a (HTML и CSS)</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Что есть внутри</h2>
+		<ol>
+			<li>Структура файлов</li>
+			<li>Всякие интересности</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Javascript</h2>
+		<ol>
+			<li>Основы</li>
+			<li>Уязвимости</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Общение</h2>
+		<ol>
+			<li>Запросы и ответы</li>
+			<li>HTTP и HTTPS</li>
+			<li>GET, POST</li>
+			<li>Зачем нужна голова на плечах(Заголовки)</li>
+			<li>Зачем нужны печеньки (Cookie и Session)</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Сервера</h2>
+		<ol>
+			<li>Apache, Nginx, IIS</li>
+			<li>Сервера на основе языков программирования</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Серверные языки Web</h2>
+		<ol>
+			<li>PHP</li>
+			<li>Ruby, Python, Node.js</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>СУБД</h2>
+		<ol>
+			<li>SQL</li>
+			<li>NoSQL</li>
+			<li>phpmyadmin и прочие рычаги управления</li>
+		</ol>
+	</section>
+
+	<section class="slide">
+		<h2>Браузеры</h2>
+		<figure>
+			<img src="pictures/browsers.png">
+		</figure>
+	</section>
+
+	<section class="slide">
+		<h2>HTML</h2>
+		<pre>
+			<code>&lt;!DOCTYPE html&gt;</code>
+			<code>&lt;html lang="ru"&gt;</code>
+			<code>&lt;head&gt;&lt;title&gt;My site&lt;/title&gt;&lt;/head&gt;</code>
+			<code>&lt;body&gt;</code>
+			<code>  Hello, world!</code>
+			<code>&lt;/body&gt;</code>
+			<code>&lt;/html&gt;</code>
+		</pre>
+	</section>
+
+	<section class="slide">
+		<h2>CSS</h2>
+		<pre>
+			<code>body {</code>
+			<code>  color: green;</code>
+			<code>  background: black;</code>
+			<code>}</code>
+			<code>h1 {</code>
+			<code>  font-size: 20px;</code>
+			<code>}</code>
+		</pre>
+	</section>
+
+	<section class="slide" id="browsers">
+		<h2>Работа с браузером</h2>
+		<figure>
+			<img src="pictures/b1.png">
+		</figure>
+		<style>
+			#browsers img {
+				width: 100%;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="browsers">
+		<h2>Инструменты разработчика</h2>
+		<ul>
+			<li>F12</li>
+		</ul>
+	</section>
+
+	<section class="slide" id="mac">
+		<h2>Если Mac</h2>
+		<figure>
+			<img src="pictures/mac.png">
+		</figure>
+		<style>
+			#mac img {
+				width: 70%;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="mac">
+		<h2>Если Mac</h2>
+		<figure>
+			<img src="pictures/mac1.png">
+		</figure>
+	</section>
+
+	<section class="slide" id="browsers">
+		<h2>Инструменты разработчика</h2>
+		<figure>
+			<img src="pictures/b2.png">
+		</figure>
+	</section>
+
+	<section class="slide" id="practice">
+		<h2>Практика</h2>
+		<p>https://escapectf.github.io/ctf-web-practice/</p>
+		<style>
+			#practice p {
+				font-size: 30px;
+			}
+		</style>
+	</section>
+
+	<section class="slide" id="see-more">
+		<h2 class="shout">Спасибо за внимание!</h2>
+		<style>
+			#see-more h2 {
+				font-size: 100px
+			}
+		</style>
+	</section>
+
+	<footer class="badge">
+		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
+	</footer>
+
+	<div class="progress"></div>
+
+	<script src="shower/shower.min.js"></script>
+	<!-- Copyright © 2018 Yours Truly, Famous Inc. -->
+
+</body>
+</html>
