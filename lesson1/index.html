@@ -12,15 +12,23 @@
 	</style>
 	
 	<script>
-		var id = parseInt(window.location.hash.replace("#", "")) || 1
-
 		function nextSlide() {
-			id = id + 1
+			var id = parseInt(window.location.hash.replace("#", "")) || 1
+			var slides = document.getElementsByTagName("section")
+			
+			if (id < slides.length - 1) {
+				id = id + 1
+			}
 			window.open("#" + id ,"_self")
 		}
 
 		function prevSlide() {
-			id = id - 1
+			var id = parseInt(window.location.hash.replace("#", "")) || 1
+			var slides = document.getElementsByTagName("section")
+			
+			if (id > 2) {
+				id = id - 1
+			}
 			window.open("#" + id ,"_self")
 		}
 	</script>
@@ -73,9 +81,9 @@
 		<h2>Не много истории</h2>
 		<ol>
 			<li>1989 - Тим Бернерс Ли предложил идею обмена информацией посредством гипертекстовых страниц</li>
-			<li class="next">1993 - Публикация проектов в сети для общественного  пользования</li>
-			<li class="next">1994 - Переход Тима Бернерса Ли в MIT, создание World  Wide Web Consortium (W3C)</li>
-			<li class="next">1995 - HTML 2.0, RFC 1866, Internet Explorer и Netscape Navigator, JavaScript</li>
+			<li>1993 - Публикация проектов в сети для общественного  пользования</li>
+			<li>1994 - Переход Тима Бернерса Ли в MIT, создание World  Wide Web Consortium (W3C)</li>
+			<li>1995 - HTML 2.0, RFC 1866, Internet Explorer и Netscape Navigator, JavaScript</li>
 		</ol>
 	</section>
 
@@ -93,17 +101,22 @@
 		<h2 class="shout shrink">Что представляет собой Web?</h2>
 	</section>
 
-	<section id="front" class="slide">
+	<section class="slide">
 		<figure>
-			<img class="cover next" src="pictures/f1.png">
-			<img class="cover next" src="pictures/f2.png">
-			<img class="cover next" src="pictures/f3.png">
+			<img class="cover" src="pictures/f1.png" style="width: 100%">
 		</figure>
-		<style>
-			#front img {
-				width: 100%
-			}
-		</style>
+	</section>
+
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/f2.png" style="width: 100%">
+		</figure>
+	</section>
+	
+	<section class="slide">
+		<figure>
+			<img class="cover" src="pictures/f3.png" style="width: 100%">
+		</figure>
 	</section>
 
 	<section class="slide">
@@ -216,73 +229,65 @@
 		</pre>
 	</section>
 
-	<section class="slide" id="browsers">
+	<section class="slide">
 		<h2>Работа с браузером</h2>
 		<figure>
-			<img src="pictures/b1.png">
-		</figure>
-		<style>
-			#browsers img {
-				width: 100%;
-			}
-		</style>
+			<img src="pictures/b1.png" style="width: 100%;">
+		</figure>>
 	</section>
 
-	<section class="slide" id="browsers">
+	<section class="slide">
 		<h2>Инструменты разработчика</h2>
 		<ul>
 			<li>F12</li>
 		</ul>
 	</section>
 
-	<section class="slide" id="mac">
+	<section class="slide">
 		<h2>Если Mac</h2>
 		<figure>
-			<img src="pictures/mac.png">
-		</figure>
-		<style>
-			#mac img {
-				width: 70%;
-			}
-		</style>
-	</section>
-
-	<section class="slide" id="mac">
-		<h2>Если Mac</h2>
-		<figure>
-			<img src="pictures/mac1.png">
+			<img src="pictures/mac.png" style="width: 70%;">
 		</figure>
 	</section>
 
-	<section class="slide" id="browsers">
+	<section class="slide">
+		<h2>Если Mac</h2>
+		<figure>
+			<img src="pictures/mac1.png" style="width: 70%;">
+		</figure>
+	</section>
+
+	<section class="slide">
 		<h2>Инструменты разработчика</h2>
 		<figure>
-			<img src="pictures/b2.png">
+			<img src="pictures/b2.png" style="width: 100%;">
 		</figure>
 	</section>
 
-	<section class="slide" id="practice">
+	<section class="slide">
 		<h2>Практика</h2>
-		<p>https://escapectf.github.io/ctf-web-practice/p1/</p>
-		<style>
-			#practice p {
-				font-size: 30px;
-			}
-		</style>
+		<p style="font-size: 30px;">https://escapectf.github.io/ctf-web-practice/p1/</p>
+		<p style="font-size: 30px;">
+			Формат флага: <b>Flag is [a-z]+_[a-z]+</b><br>
+			Пример:<br>
+			Flag is test_flag<br>
+			flag_is_test_flag<br>
+			но это не точно ;)
+		</p>
 	</section>
 
-	<section class="slide" id="see-more">
+	<section class="slide see-more">
 		<h2 class="shout">Спасибо за внимание!</h2>
 		<figure>
 			<img src="pictures/site.png">
 		</figure>
 		<style>
-			#see-more h2 {
-				font-size: 100px;
-				margin-top: -150px;
+			.see-more h2 {
+				font-size: 100px !important;
+				margin-top: -150px !important;
 			}
 
-			#see-more figure {
+			.see-more figure {
 				margin-top: 100px;
 				text-align: center;
 			}
