@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" oncontextmenu="prevSlide();" onclick="nextSlide();">
 <head>
-	<title>Shower Presentation Engine</title>
+	<title>Курс Web-технологий в ИБ</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css">
@@ -9,18 +9,32 @@
         .shower {
             --slide-ratio: calc(16 / 9);
         }
-    </style>
+	</style>
+	
+	<script>
+		var id = parseInt(window.location.hash.replace("#", "")) || 1
+
+		function nextSlide() {
+			id = id + 1
+			window.open("#" + id ,"_self")
+		}
+
+		function prevSlide() {
+			id = id - 1
+			window.open("#" + id ,"_self")
+		}
+	</script>
 </head>
 <body class="shower list">
 
 	<header class="caption">
 		<h1>Курс Web-технологий в ИБ</h1>
-		<p>DEADBLACKCLOVER</p>
+		<p>by DEADBLACKCLOVER</p>
 	</header>
 
 	<section class="slide" id="cover">
 		<h2>Введение<br>в Web</h2>
-		<p>by <a href="https://deadblackclover.gitlab.io/">DEADBLACKCLOVER</a></p>
+		<p>by <a href="https://deadblackclover.github.io/">DEADBLACKCLOVER</a></p>
 		<p>Tg: @cloverfuckblack
 		<figure>
 			<img class="cover" src="pictures/cover.jpg">
@@ -47,10 +61,6 @@
 
 			#cover p a {
 				color: white;
-			}
-
-			#cover img {
-
 			}
 		</style>
 	</section>
@@ -121,9 +131,9 @@
 	</section>
 
 	<section class="slide">
-		<h2>Что есть внутри</h2>
+		<h2>Что есть внутри и чего мы не видим</h2>
 		<ol>
-			<li>Структура файлов</li>
+			<li>Структура файлов на сервере (index.html, robots.txt, и т.д.)</li>
 			<li>Всякие интересности</li>
 		</ol>
 	</section>
@@ -131,24 +141,24 @@
 	<section class="slide">
 		<h2>Javascript</h2>
 		<ol>
-			<li>Основы</li>
-			<li>Уязвимости</li>
+			<li>База</li>
+			<li>Уязвимости (XSS и т.д.)</li>
 		</ol>
 	</section>
 
 	<section class="slide">
-		<h2>Общение</h2>
+		<h2>Общение с серверами</h2>
 		<ol>
 			<li>Запросы и ответы</li>
 			<li>HTTP и HTTPS</li>
-			<li>GET, POST</li>
-			<li>Зачем нужна голова на плечах(Заголовки)</li>
+			<li>GET, POST, DELETE, PUT</li>
+			<li>Зачем нужна голова на плечах(Заголовки, Headers)</li>
 			<li>Зачем нужны печеньки (Cookie и Session)</li>
 		</ol>
 	</section>
 
 	<section class="slide">
-		<h2>Сервера</h2>
+		<h2>HTTP Сервера</h2>
 		<ol>
 			<li>Apache, Nginx, IIS</li>
 			<li>Сервера на основе языков программирования</li>
@@ -160,14 +170,15 @@
 		<ol>
 			<li>PHP</li>
 			<li>Ruby, Python, Node.js</li>
+			<li>Go, Rust</li>
 		</ol>
 	</section>
 
 	<section class="slide">
 		<h2>СУБД</h2>
 		<ol>
-			<li>SQL</li>
-			<li>NoSQL</li>
+			<li>SQL (MySQL, MariaDB, PostgreSQL)</li>
+			<li>NoSQL (MongoDB, Freebase)</li>
 			<li>phpmyadmin и прочие рычаги управления</li>
 		</ol>
 	</section>
@@ -252,7 +263,7 @@
 
 	<section class="slide" id="practice">
 		<h2>Практика</h2>
-		<p>https://escapectf.github.io/ctf-web-practice/</p>
+		<p>https://escapectf.github.io/ctf-web-practice/p1/</p>
 		<style>
 			#practice p {
 				font-size: 30px;
@@ -262,9 +273,18 @@
 
 	<section class="slide" id="see-more">
 		<h2 class="shout">Спасибо за внимание!</h2>
+		<figure>
+			<img src="pictures/site.png">
+		</figure>
 		<style>
 			#see-more h2 {
-				font-size: 100px
+				font-size: 100px;
+				margin-top: -150px;
+			}
+
+			#see-more figure {
+				margin-top: 100px;
+				text-align: center;
 			}
 		</style>
 	</section>
